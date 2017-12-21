@@ -77,6 +77,7 @@ header {
 .news {
   border: 1px solid rgba(29, 92, 226, 0.2);
   padding: 2vh;
+  margin: 0 auto;
 }
 
 .article {
