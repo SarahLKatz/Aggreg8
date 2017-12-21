@@ -2,7 +2,7 @@
 
 *Real Time News, Just For You*
 
-Created by [Sarah Katz]('https://github.com/SarahLKatz/').
+Created by [Sarah Katz](https://github.com/SarahLKatz/).
 
 Bootstrapped with [Fullstack Academy](https://github.com/FullstackAcademy)'s Boilermaker. I used Boilermaker for several projects while at Fullstack, and found it to be a great quick sarting point
 
