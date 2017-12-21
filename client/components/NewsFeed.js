@@ -18,16 +18,15 @@ export default class NewsFeed extends Component{
   render() {
     const { nyt } = this.state;
     return(
-      <div>
-        <h3>New York Times Stories</h3>
+      <div className="news">
         {
           nyt.map((story, idx) => {
             return (
               <div className="article" key={idx}>
-                <a href={story.url} target="_blank"><span className="title">{story.title}</span> {story.byline}</a>
-                <p>
-                  {story.abstract}
-                </p>
+                <div>
+                  <a href={story.url} target="_blank"><span className="title">{story.title}</span></a> (New York Times)
+                </div>
+                <span className="abstract">{story.abstract}</span>
               </div>
             )
           })
