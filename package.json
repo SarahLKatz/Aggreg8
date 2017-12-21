@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "Aggreg8",
   "version": "1.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "Real Time News, Just For You.",
   "engines": {
     "node": ">= 7.0.0"
   },
