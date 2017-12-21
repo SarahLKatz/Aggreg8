@@ -24,7 +24,7 @@ export default class NewsFeed extends Component{
             return (
               <div className="article" key={idx}>
                 <div>
-                  <a href={story.url} target="_blank"><span className="title">{story.title}</span></a> (New York Times)
+                  <a href={story.url} target="_blank"><span className="title">{story.title}</span></a> (New York Times, {story.date})
                 </div>
                 <span className="abstract">{story.abstract}</span>
               </div>

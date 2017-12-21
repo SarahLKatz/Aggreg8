@@ -21,7 +21,6 @@ Bootstrapped with [Fullstack Academy](https://github.com/FullstackAcademy)'s Boi
 * Run `npm test`
 
 ## Future Features
-* Include date story was published
 * Allow users to filter by keyword
 * Add additional news sources (including Twiter, Google News, and others)
 * Allow users to filter by news source
