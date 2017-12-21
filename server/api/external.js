@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const NYT_API =  process.env.NYT_API
 const axios = require('axios')
+const moment = require('moment')
 module.exports = router
 
 router.get('/nyt', (req,res,next) => {
@@ -14,7 +15,8 @@ router.get('/nyt', (req,res,next) => {
         byline: result.byline,
         abstract: result.abstract.slice(0,280),
         url: result.url,
-        date: result.created_date
+        date: moment(result.created_date).format('MM/DD/YYYY, h:mmA')
+
       })
     })
   })
