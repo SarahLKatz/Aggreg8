@@ -11,27 +11,31 @@ import {logout} from '../store'
  *  rendered out by the component's `children`.
  */
 const Main = (props) => {
-  const {children, handleClick, isLoggedIn} = props
+  const {children, handleClick, isLoggedIn, email} = props
 
   return (
-    <div>
-      <h1>Aggreg8</h1>
-      <nav>
-        {
-          isLoggedIn
-            ? <div>
-              {/* The navbar will show these links after you log in */}
-              <Link to="/home">Home</Link>
-              <a href="#" onClick={handleClick}>Logout</a>
-            </div>
-            : <div>
-              {/* The navbar will show these links before you log in */}
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Sign Up</Link>
-            </div>
-        }
-      </nav>
-      <hr />
+    <div className="container">
+      <div className="top">
+        <header>
+          <h1 className="header-name">Aggreg8</h1>
+          <span>Real Time News, Just For You</span>
+        </header>
+        <nav>
+          {
+            isLoggedIn
+              ? <div className="nav-auth">
+                {/* The navbar will show these links after you log in */}
+                <Link to="/home"><span>Welcome, {email}</span></Link>
+                <a href="#" onClick={handleClick}>Logout</a>
+              </div>
+              : <div className="nav-auth">
+                {/* The navbar will show these links before you log in */}
+                <Link to="/login">Login</Link>
+                <Link to="/signup">Sign Up</Link>
+              </div>
+          }
+        </nav>
+      </div>
       {children}
     </div>
   )
@@ -42,7 +46,8 @@ const Main = (props) => {
  */
 const mapState = (state) => {
   return {
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    email: state.user.email || ''
   }
 }
 
@@ -64,5 +69,6 @@ export default withRouter(connect(mapState, mapDispatch)(Main))
 Main.propTypes = {
   children: PropTypes.object,
   handleClick: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool.isRequired
+  isLoggedIn: PropTypes.bool.isRequired,
+  email: PropTypes.string
 }
