@@ -4,7 +4,7 @@
 
 Created by [Sarah Katz](https://github.com/SarahLKatz/).
 
-Bootstrapped with [Fullstack Academy](https://github.com/FullstackAcademy)'s Boilermaker. I used Boilermaker for several projects while at Fullstack, and found it to be a great quick sarting point
+Bootstrapped with [Fullstack Academy](https://github.com/FullstackAcademy)'s Boilermaker. I used Boilermaker for several projects while at Fullstack, and found it to be a great quick starting point for my React and Redux projects.
 
 ## Running This App
 * Fork this repo
